@@ -20,6 +20,6 @@ class MyApp extends StatelessWidget {
         OnboardingScreen.routName: (_) => const OnboardingScreen(),
         PersonaScreen.routName: (_) => const PersonaScreen(),
       },
-      initialRoute: PersonaScreen.routName,    );
+      initialRoute: SplashScreen.routName,    );
   }
 }
