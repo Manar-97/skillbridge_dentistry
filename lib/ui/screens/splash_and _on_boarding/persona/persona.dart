@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:skillbridge_dentistry/ui/screens/gradueted_flow/Auth/dentist/dentist.dart';
 import 'package:skillbridge_dentistry/ui/utils/widgets/appButton.dart';
 
 class PersonaScreen extends StatefulWidget {
@@ -30,7 +31,11 @@ class _PersonaScreenState extends State<PersonaScreen> {
               SizedBox(height: MediaQuery.of(context).size.height * 0.04),
               AppButton(text: 'Consultant', onTap: () {}),
               SizedBox(height: MediaQuery.of(context).size.height * 0.04),
-              AppButton(text: 'Fresh Graduated', onTap: () {}),
+              AppButton(
+                  text: 'Fresh Graduated',
+                  onTap: () {
+                    Navigator.pushReplacementNamed(context, Dentist.routeName);
+                  }),
             ],
           ),
         ),
