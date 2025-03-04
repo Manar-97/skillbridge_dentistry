@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:skillbridge_dentistry/ui/screens/onboarding/onboarding.dart';
+
+import '../onboarding/onboarding.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
-  static const String routName = "splash";
+  static const String routeName = "splash";
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
@@ -14,7 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     Future.delayed(const Duration(seconds: 3), () {
-      Navigator.pushReplacementNamed(context, OnboardingScreen.routName);
+      Navigator.pushReplacementNamed(context, OnboardingScreen.routeName);
     });
     super.initState();
   }

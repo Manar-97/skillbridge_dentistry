@@ -4,7 +4,7 @@ import 'package:skillbridge_dentistry/ui/utils/widgets/appButton.dart';
 
 class PersonaScreen extends StatefulWidget {
   const PersonaScreen({super.key});
-  static const String routName = "persona";
+  static const String routeName = "persona";
 
   @override
   State<PersonaScreen> createState() => _PersonaScreenState();
