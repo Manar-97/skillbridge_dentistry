@@ -13,6 +13,9 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  final TextEditingController _email = TextEditingController();
+  final TextEditingController _pass = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,16 +44,16 @@ class _LoginState extends State<Login> {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.04,
             ),
-            const AppTextField(
+             AppTextField(
               text: 'Email',
-              hintText: 'Enter your email',
+              hintText: 'Enter your email', controller: _email,
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.02,
             ),
-            const AppTextField(
+             AppTextField(
               text: 'Password',
-              hintText: 'Enter password',
+              hintText: 'Enter password', controller: _pass,
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,

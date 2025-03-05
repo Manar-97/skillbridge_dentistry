@@ -15,6 +15,9 @@ class Register extends StatefulWidget {
 }
 
 class _RegisterState extends State<Register> {
+  final TextEditingController _email = TextEditingController();
+  final TextEditingController _pass = TextEditingController();
+  final TextEditingController _rePass = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,23 +46,26 @@ class _RegisterState extends State<Register> {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.04,
             ),
-            const AppTextField(
+            AppTextField(
               text: 'Email',
               hintText: 'Enter your email',
+              controller: _email,
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.02,
             ),
-            const AppTextField(
+            AppTextField(
               text: 'Password',
               hintText: 'Enter password',
+              controller: _pass,
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.02,
             ),
-            const AppTextField(
+            AppTextField(
               text: 'Confirm Password',
               hintText: 'Re-Enter password',
+              controller: _rePass,
             ),
             CheckboxListTile(
               checkColor: Colors.white,

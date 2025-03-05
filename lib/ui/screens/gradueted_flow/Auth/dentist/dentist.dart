@@ -13,6 +13,8 @@ class Dentist extends StatefulWidget {
 
 class _DentistState extends State<Dentist> {
   String? _selectedValue;
+  final TextEditingController _fullName = TextEditingController();
+  final TextEditingController _years = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -39,16 +41,18 @@ class _DentistState extends State<Dentist> {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.04,
             ),
-            const AppTextField(
+            AppTextField(
               text: 'Full Name',
               hintText: 'Enter the answer',
+              controller: _fullName,
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.02,
             ),
-            const AppTextField(
+            AppTextField(
               text: 'Years of Graduation',
               hintText: 'Enter the answer',
+              controller: _years,
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.02,
