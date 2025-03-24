@@ -5,6 +5,7 @@ import 'package:skillbridge_dentistry/ui/utils/widgets/appButton.dart';
 
 import '../../../../utils/widgets/apptextfield.dart';
 import '../../../../utils/widgets/auth_metods.dart';
+import '../../mainscreen.dart';
 import '../login/login.dart';
 
 class Register extends StatefulWidget {
@@ -85,7 +86,11 @@ class _RegisterState extends State<Register> {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.04,
             ),
-            AppButton(text: 'Sign up', onTap: () {}),
+            AppButton(
+                text: 'Sign up',
+                onTap: () {
+                  Navigator.pushReplacementNamed(context, MainScreen.routeName);
+                }),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.05,
             ),

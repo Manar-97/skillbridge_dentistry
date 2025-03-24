@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:skillbridge_dentistry/ui/screens/gradueted_flow/Auth/paswword/forgetpassword/forgetpassword.dart';
 import 'package:skillbridge_dentistry/ui/screens/gradueted_flow/Auth/register/register.dart';
+import 'package:skillbridge_dentistry/ui/screens/gradueted_flow/mainscreen.dart';
 import 'package:skillbridge_dentistry/ui/utils/widgets/appButton.dart';
 import '../../../../utils/widgets/apptextfield.dart';
 import '../../../../utils/widgets/auth_metods.dart';
@@ -44,22 +46,27 @@ class _LoginState extends State<Login> {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.04,
             ),
-             AppTextField(
+            AppTextField(
               text: 'Email',
-              hintText: 'Enter your email', controller: _email,
+              hintText: 'Enter your email',
+              controller: _email,
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.02,
             ),
-             AppTextField(
+            AppTextField(
               text: 'Password',
-              hintText: 'Enter password', controller: _pass,
+              hintText: 'Enter password',
+              controller: _pass,
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,
             ),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushReplacementNamed(
+                    context, ForgotPassword.routeName);
+              },
               child: Align(
                 alignment: Alignment.bottomRight,
                 child: Text(
@@ -74,7 +81,11 @@ class _LoginState extends State<Login> {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.04,
             ),
-            AppButton(text: 'Sign in', onTap: () {}),
+            AppButton(
+                text: 'Sign in',
+                onTap: () {
+                  Navigator.pushReplacementNamed(context, MainScreen.routeName);
+                }),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.05,
             ),

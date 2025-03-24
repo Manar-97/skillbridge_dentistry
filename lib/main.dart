@@ -5,6 +5,9 @@ import 'package:skillbridge_dentistry/ui/screens/gradueted_flow/Auth/paswword/fo
 import 'package:skillbridge_dentistry/ui/screens/gradueted_flow/Auth/paswword/resetpassword/resetpassword.dart';
 import 'package:skillbridge_dentistry/ui/screens/gradueted_flow/Auth/paswword/verifycode/verifycode.dart';
 import 'package:skillbridge_dentistry/ui/screens/gradueted_flow/Auth/register/register.dart';
+import 'package:skillbridge_dentistry/ui/screens/gradueted_flow/camera/camera.dart';
+import 'package:skillbridge_dentistry/ui/screens/gradueted_flow/camera/case_description/case_description.dart';
+import 'package:skillbridge_dentistry/ui/screens/gradueted_flow/check_out/check_out.dart';
 import 'package:skillbridge_dentistry/ui/screens/gradueted_flow/home/home.dart';
 import 'package:skillbridge_dentistry/ui/screens/gradueted_flow/mainscreen.dart';
 import 'package:skillbridge_dentistry/ui/screens/gradueted_flow/notification/notification.dart';
@@ -36,9 +39,12 @@ class MyApp extends StatelessWidget {
         VerifyCode.routeName: (_) => const VerifyCode(),
         Home.routeName: (_) => const Home(),
         MainScreen.routeName: (_) => const MainScreen(),
+        CameraCases.routeName: (_) => const CameraCases(),
+        CaseDescription.routeName: (_) => const CaseDescription(),
         Notifications.routeName: (_) => const Notifications(),
+        CheckOut.routeName: (_) => const CheckOut(),
       },
-      initialRoute: MainScreen.routeName,
+      initialRoute: SplashScreen.routeName,
     );
   }
 }

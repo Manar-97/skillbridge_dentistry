@@ -41,6 +41,7 @@ dependencies:
   flutter_otp_text_field: ^1.5.1+1
   image_picker: ^1.1.2
   fl_chart: ^0.69.2
+  easy_stepper: ^0.8.5+1
 dev_dependencies:
   flutter_test:
     sdk: flutter
