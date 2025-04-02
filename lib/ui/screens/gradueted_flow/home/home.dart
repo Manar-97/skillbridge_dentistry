@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:skillbridge_dentistry/ui/screens/gradueted_flow/camera/camera.dart';
 import 'package:skillbridge_dentistry/ui/utils/widgets/appButton.dart';
 import '../../../utils/widgets/casecontainer.dart';
 import '../../../utils/widgets/recommendedcontainer.dart';
+import '../camera/case_description/case_description.dart';
 import '../notification/notification.dart';
 
 class Home extends StatefulWidget {
@@ -113,7 +115,9 @@ class _HomeState extends State<Home> {
       children: [
         CaseContainer(
           icon: Icons.medical_services_outlined,
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, CaseDescription.routeName);
+          },
           text: 'Description',
         ),
         CaseContainer(
@@ -123,7 +127,9 @@ class _HomeState extends State<Home> {
         ),
         CaseContainer(
           icon: Icons.image_outlined,
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, CameraCases.routeName);
+          },
           text: 'Image',
         ),
       ],

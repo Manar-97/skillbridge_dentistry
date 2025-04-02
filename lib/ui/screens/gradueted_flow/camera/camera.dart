@@ -46,7 +46,7 @@ class _CameraCasesState extends State<CameraCases> {
               child: SizedBox(
                 height: MediaQuery.of(context).size.height * 0.716,
                 child: GridView.builder(
-                  itemCount: 100,
+                  itemCount: 50,
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 4,
                     mainAxisSpacing: 15,

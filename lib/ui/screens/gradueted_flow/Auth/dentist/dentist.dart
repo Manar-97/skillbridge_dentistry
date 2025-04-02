@@ -85,6 +85,11 @@ class _DentistState extends State<Dentist> {
                     child: Text(
                       'O6U',
                     )),
+                DropdownMenuItem(
+                    value: 'other',
+                    child: Text(
+                      'other',
+                    )),
               ],
               onChanged: (value) {
                 setState(() {
@@ -140,6 +145,11 @@ class _DentistState extends State<Dentist> {
                     value: 'o6u',
                     child: Text(
                       'O6U',
+                    )),
+                DropdownMenuItem(
+                    value: 'other',
+                    child: Text(
+                      'other',
                     )),
               ],
               onChanged: (value) {
