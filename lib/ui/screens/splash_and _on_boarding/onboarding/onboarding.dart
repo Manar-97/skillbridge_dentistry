@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:skillbridge_dentistry/ui/screens/Auth/register/register.dart';
 import 'package:skillbridge_dentistry/ui/utils/widgets/appButton.dart';
 
 import '../persona/persona.dart';
@@ -49,8 +50,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             right: 20,
             child: TextButton(
               onPressed: () {
-                // Navigate to main screen (مثلاً صفحة Home)
-                Navigator.pushReplacementNamed(context, PersonaScreen.routeName);
+                Navigator.pushReplacementNamed(context, Register.routeName);
               },
               child: Text(
                 'Skip',
@@ -89,8 +89,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             child: AppButton(
                 onTap: () {
                   if (_currentPage == 2) {
-                    Navigator.pushReplacementNamed(
-                        context, PersonaScreen.routeName);
+                    Navigator.pushReplacementNamed(context, Register.routeName);
                   } else {
                     _pageController.nextPage(
                       duration: const Duration(milliseconds: 500),

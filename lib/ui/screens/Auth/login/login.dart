@@ -1,24 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:skillbridge_dentistry/ui/utils/appcolors.dart';
 import 'package:skillbridge_dentistry/ui/utils/widgets/appButton.dart';
+import '../../../utils/widgets/apptextfield.dart';
+import '../../../utils/widgets/auth_metods.dart';
+import '../../splash_and _on_boarding/persona/persona.dart';
+import '../paswword/forgetpassword/forgetpassword.dart';
+import '../register/register.dart';
 
-import '../../../../utils/widgets/apptextfield.dart';
-import '../../../../utils/widgets/auth_metods.dart';
-import '../../mainscreen.dart';
-import '../login/login.dart';
-
-class Register extends StatefulWidget {
-  const Register({super.key});
-  static const String routeName = 'register';
+class Login extends StatefulWidget {
+  const Login({super.key});
+  static const String routeName = 'login';
   @override
-  State<Register> createState() => _RegisterState();
+  State<Login> createState() => _LoginState();
 }
 
-class _RegisterState extends State<Register> {
+class _LoginState extends State<Login> {
   final TextEditingController _email = TextEditingController();
   final TextEditingController _pass = TextEditingController();
-  final TextEditingController _rePass = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +27,7 @@ class _RegisterState extends State<Register> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Register',
+              'Welcome Back',
               style: GoogleFonts.getFont('Inter',
                   color: const Color(0xFF5D9F99),
                   fontSize: 22,
@@ -38,7 +37,7 @@ class _RegisterState extends State<Register> {
               height: MediaQuery.of(context).size.height * 0.005,
             ),
             Text(
-              'Create your new account',
+              'Login to your account',
               style: GoogleFonts.getFont('Inter',
                   color: const Color(0xFF898989),
                   fontSize: 16,
@@ -61,35 +60,32 @@ class _RegisterState extends State<Register> {
               controller: _pass,
             ),
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.02,
+              height: MediaQuery.of(context).size.height * 0.01,
             ),
-            AppTextField(
-              text: 'Confirm Password',
-              hintText: 'Re-Enter password',
-              controller: _rePass,
-            ),
-            CheckboxListTile(
-              checkColor: Colors.white,
-              activeColor: AppColors.mainColor,
-              value: true,
-              onChanged: (value) {},
-              controlAffinity: ListTileControlAffinity.leading,
-              contentPadding: const EdgeInsets.only(left: 0, top: 0),
-              title: const Text(
-                "Remember Me",
-                style: TextStyle(
-                    color: Color(0xFF898989),
-                    fontFamily: "Inter",
-                    fontSize: 12),
+            GestureDetector(
+              onTap: () {
+                Navigator.pushReplacementNamed(
+                    context, ForgotPassword.routeName);
+              },
+              child: Align(
+                alignment: Alignment.bottomRight,
+                child: Text(
+                  'Forget Password?',
+                  style: GoogleFonts.getFont('Inter',
+                      color: const Color(0xFF5D9F99),
+                      fontSize: 12,
+                      fontWeight: FontWeight.w400),
+                ),
               ),
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.04,
             ),
             AppButton(
-                text: 'Sign up',
+                text: 'Sign in',
                 onTap: () {
-                  Navigator.pushReplacementNamed(context, MainScreen.routeName);
+                  Navigator.pushReplacementNamed(
+                      context, PersonaScreen.routeName);
                 }),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.05,
@@ -128,15 +124,11 @@ class _RegisterState extends State<Register> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   AuthMethods(
-                    imageName: 'assets/logos_facebook.png',
+                    imageName: 'assets/facebook.png',
                     onTap: () {},
                   ),
                   AuthMethods(
-                    imageName: 'assets/logos_google.png',
-                    onTap: () {},
-                  ),
-                  AuthMethods(
-                    imageName: 'assets/logos_iphone.png',
+                    imageName: 'assets/google.png',
                     onTap: () {},
                   ),
                 ],
@@ -149,16 +141,16 @@ class _RegisterState extends State<Register> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Already have an account?',
+                  'Don\'t have an account?',
                   style: GoogleFonts.getFont('Inter',
                       fontSize: 12, fontWeight: FontWeight.w400),
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.pushNamed(context, Login.routeName);
+                    Navigator.pushNamed(context, Register.routeName);
                   },
                   child: Text(
-                    ' Sign in',
+                    ' Sign up',
                     style: GoogleFonts.getFont('Inter',
                         color: const Color(0xFF5D9F99),
                         fontSize: 12,

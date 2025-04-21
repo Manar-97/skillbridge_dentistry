@@ -1,26 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:skillbridge_dentistry/ui/screens/gradueted_flow/points/points.dart';
 import 'package:skillbridge_dentistry/ui/screens/gradueted_flow/profile/profile.dart';
-
 import '../../utils/appcolors.dart';
 import 'camera/camera.dart';
 import 'home/home.dart';
 
-class MainScreen extends StatefulWidget {
-  const MainScreen({super.key});
-  static const String routeName = 'main';
+class MainDentistScreen extends StatefulWidget {
+  const MainDentistScreen({super.key});
+  static const String routeName = 'maindent';
 
   @override
-  State<MainScreen> createState() => _MainScreenState();
+  State<MainDentistScreen> createState() => _MainDentistScreenState();
 }
 
-class _MainScreenState extends State<MainScreen> {
+class _MainDentistScreenState extends State<MainDentistScreen> {
   int _selectedIndex = 0;
   Widget currentTab = const Home();
   List<Widget> tabs = [
     const Home(),
     const CameraCases(),
-    const PointsScreen(),
     const ProfileScreen()
   ];
   @override
@@ -47,8 +44,6 @@ class _MainScreenState extends State<MainScreen> {
             ),
             BottomNavigationBarItem(
                 icon: Icon(Icons.camera_alt_outlined), label: 'Camera'),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.add_shopping_cart), label: 'Points'),
             BottomNavigationBarItem(
                 icon: Icon(Icons.person_outline), label: 'Profile')
           ]),

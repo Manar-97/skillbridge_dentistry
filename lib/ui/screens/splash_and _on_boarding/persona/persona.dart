@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:skillbridge_dentistry/ui/screens/gradueted_flow/Auth/dentist/dentist.dart';
 import 'package:skillbridge_dentistry/ui/utils/widgets/appButton.dart';
+
+import '../../Auth/consultant/consultant.dart';
+import '../../Auth/dentist/dentist.dart';
 
 class PersonaScreen extends StatefulWidget {
   const PersonaScreen({super.key});
@@ -29,7 +31,9 @@ class _PersonaScreenState extends State<PersonaScreen> {
                   style: GoogleFonts.getFont('Inter',
                       fontSize: 20, fontWeight: FontWeight.w500)),
               SizedBox(height: MediaQuery.of(context).size.height * 0.04),
-              AppButton(text: 'Consultant', onTap: () {}),
+              AppButton(text: 'Consultant', onTap: () {
+                Navigator.pushReplacementNamed(context, Consultant.routeName);
+              }),
               SizedBox(height: MediaQuery.of(context).size.height * 0.04),
               AppButton(
                   text: 'Fresh Graduated',

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:skillbridge_dentistry/ui/screens/gradueted_flow/camera/found_treate_case_details.dart';
 import 'package:skillbridge_dentistry/ui/utils/widgets/appButton.dart';
 
 class CaseDescription extends StatefulWidget {
@@ -90,5 +91,9 @@ class _CaseDescriptionState extends State<CaseDescription> {
         );
       },
     );
+    Future.delayed(const Duration(seconds: 5), () {
+      Navigator.pushReplacementNamed(
+          context, FoundTreatCaseDetails.routeName); // يقفل الـDialog
+    });
   }
 }

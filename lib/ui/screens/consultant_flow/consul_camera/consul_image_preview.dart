@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:skillbridge_dentistry/ui/screens/gradueted_flow/camera/case_description/case_description.dart';
 import 'package:skillbridge_dentistry/ui/utils/widgets/appButton.dart';
 
-class ImagePreviewScreen extends StatelessWidget {
+class ConsultantImagePreviewScreen extends StatelessWidget {
   final File imageFile;
 
-  const ImagePreviewScreen({super.key, required this.imageFile});
+  const ConsultantImagePreviewScreen({super.key, required this.imageFile});
 
   @override
   Widget build(BuildContext context) {

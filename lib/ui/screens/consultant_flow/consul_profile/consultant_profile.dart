@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../../utils/widgets/listtilewidget.dart';
 
-class ProfileScreen extends StatefulWidget {
-  const ProfileScreen({super.key});
+class ConsultantProfileScreen extends StatefulWidget {
+  const ConsultantProfileScreen({super.key});
   static const String routeName = 'profile';
   @override
-  State<ProfileScreen> createState() => _ProfileScreenState();
+  State<ConsultantProfileScreen> createState() => _ConsultantProfileScreenState();
 }
 
-class _ProfileScreenState extends State<ProfileScreen> {
+class _ConsultantProfileScreenState extends State<ConsultantProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,12 +28,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
           children: [
             SizedBox(height: MediaQuery.of(context).size.height * 0.02),
             const CircleAvatar(
-              backgroundImage: AssetImage('assets/profile.png'),
+              backgroundImage: AssetImage('assets/types of categories2.png'),
               radius: 80,
             ),
             SizedBox(height: MediaQuery.of(context).size.height * 0.01),
             Text(
-              'Mohamed Ahmed',
+              'Dr/ Mohamed Ahmed',
               style: GoogleFonts.getFont('Inter',
                   fontSize: 20, color: const Color(0xFF13122B)),
             ),

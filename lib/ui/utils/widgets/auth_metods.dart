@@ -9,13 +9,12 @@ class AuthMethods extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        height: 30,
-        width: 30,
+        height: 80,
+        width: 80,
         decoration: BoxDecoration(
             boxShadow: const [
-              BoxShadow(color: Colors.black26, blurRadius: 10, spreadRadius: 3),
+              BoxShadow(color: Colors.black26, blurRadius: 50, spreadRadius: 2),
             ],
-            color: Colors.white,
             image: DecorationImage(
                 image: AssetImage(imageName)),
             borderRadius: BorderRadius.circular(50)),

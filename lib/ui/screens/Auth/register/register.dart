@@ -1,23 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:skillbridge_dentistry/ui/screens/gradueted_flow/Auth/paswword/forgetpassword/forgetpassword.dart';
-import 'package:skillbridge_dentistry/ui/screens/gradueted_flow/Auth/register/register.dart';
-import 'package:skillbridge_dentistry/ui/screens/gradueted_flow/mainscreen.dart';
+import 'package:skillbridge_dentistry/ui/screens/splash_and%20_on_boarding/persona/persona.dart';
+import 'package:skillbridge_dentistry/ui/utils/appcolors.dart';
 import 'package:skillbridge_dentistry/ui/utils/widgets/appButton.dart';
-import '../../../../utils/widgets/apptextfield.dart';
-import '../../../../utils/widgets/auth_metods.dart';
+import '../../../utils/widgets/apptextfield.dart';
+import '../../../utils/widgets/auth_metods.dart';
+import '../login/login.dart';
 
-class Login extends StatefulWidget {
-  const Login({super.key});
-  static const String routeName = 'login';
+class Register extends StatefulWidget {
+  const Register({super.key});
+  static const String routeName = 'register';
   @override
-  State<Login> createState() => _LoginState();
+  State<Register> createState() => _RegisterState();
 }
 
-class _LoginState extends State<Login> {
+class _RegisterState extends State<Register> {
   final TextEditingController _email = TextEditingController();
   final TextEditingController _pass = TextEditingController();
-
+  final TextEditingController _rePass = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +27,7 @@ class _LoginState extends State<Login> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Welcome Back',
+              'Register',
               style: GoogleFonts.getFont('Inter',
                   color: const Color(0xFF5D9F99),
                   fontSize: 22,
@@ -37,7 +37,7 @@ class _LoginState extends State<Login> {
               height: MediaQuery.of(context).size.height * 0.005,
             ),
             Text(
-              'Login to your account',
+              'Create your new account',
               style: GoogleFonts.getFont('Inter',
                   color: const Color(0xFF898989),
                   fontSize: 16,
@@ -60,31 +60,36 @@ class _LoginState extends State<Login> {
               controller: _pass,
             ),
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.01,
+              height: MediaQuery.of(context).size.height * 0.02,
             ),
-            GestureDetector(
-              onTap: () {
-                Navigator.pushReplacementNamed(
-                    context, ForgotPassword.routeName);
-              },
-              child: Align(
-                alignment: Alignment.bottomRight,
-                child: Text(
-                  'Forget Password?',
-                  style: GoogleFonts.getFont('Inter',
-                      color: const Color(0xFF5D9F99),
-                      fontSize: 12,
-                      fontWeight: FontWeight.w400),
-                ),
+            AppTextField(
+              text: 'Confirm Password',
+              hintText: 'Re-Enter password',
+              controller: _rePass,
+            ),
+            CheckboxListTile(
+              checkColor: Colors.white,
+              activeColor: AppColors.mainColor,
+              value: true,
+              onChanged: (value) {},
+              controlAffinity: ListTileControlAffinity.leading,
+              contentPadding: const EdgeInsets.only(left: 0, top: 0),
+              title: const Text(
+                "Remember Me",
+                style: TextStyle(
+                    color: Color(0xFF898989),
+                    fontFamily: "Inter",
+                    fontSize: 12),
               ),
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.04,
             ),
             AppButton(
-                text: 'Sign in',
+                text: 'Sign up',
                 onTap: () {
-                  Navigator.pushReplacementNamed(context, MainScreen.routeName);
+                  Navigator.pushReplacementNamed(
+                      context, Login.routeName);
                 }),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.05,
@@ -123,15 +128,11 @@ class _LoginState extends State<Login> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   AuthMethods(
-                    imageName: 'assets/logos_facebook.png',
+                    imageName: 'assets/facebook.png',
                     onTap: () {},
                   ),
                   AuthMethods(
-                    imageName: 'assets/logos_google.png',
-                    onTap: () {},
-                  ),
-                  AuthMethods(
-                    imageName: 'assets/logos_iphone.png',
+                    imageName: 'assets/google.png',
                     onTap: () {},
                   ),
                 ],
@@ -144,16 +145,16 @@ class _LoginState extends State<Login> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Don\'t have an account?',
+                  'Already have an account?',
                   style: GoogleFonts.getFont('Inter',
                       fontSize: 12, fontWeight: FontWeight.w400),
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.pushNamed(context, Register.routeName);
+                    Navigator.pushNamed(context, Login.routeName);
                   },
                   child: Text(
-                    ' Sign up',
+                    ' Sign in',
                     style: GoogleFonts.getFont('Inter',
                         color: const Color(0xFF5D9F99),
                         fontSize: 12,

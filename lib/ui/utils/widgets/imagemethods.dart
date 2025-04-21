@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../../utils/appcolors.dart';
+import '../appcolors.dart';
 
 class ImageMethods extends StatelessWidget {
   const ImageMethods(
