@@ -43,7 +43,7 @@ class _MainConsultantScreenState extends State<MainConsultantScreen> {
               label: 'Home',
             ),
             BottomNavigationBarItem(
-                icon: Icon(Icons.personal_injury_outlined), label: 'Cases'),
+                icon: Icon(Icons.network_cell), label: 'Level'),
             BottomNavigationBarItem(
                 icon: Icon(Icons.person_outline), label: 'Profile')
           ]),

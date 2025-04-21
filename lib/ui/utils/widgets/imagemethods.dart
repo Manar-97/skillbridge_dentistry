@@ -15,8 +15,8 @@ class ImageMethods extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        height: 50,
-        width: 180,
+        height: 200,
+        width: 200,
         margin: const EdgeInsets.all(10),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
@@ -29,11 +29,12 @@ class ImageMethods extends StatelessWidget {
               Icon(
                 icon,
                 color: AppColors.mainColor,
+                size: 50,
               ),
               Text(
                 text,
                 style: GoogleFonts.getFont('Inter',
-                    fontSize: 16,
+                    fontSize: 20,
                     fontWeight: FontWeight.w500,
                     color: AppColors.mainColor),
               )

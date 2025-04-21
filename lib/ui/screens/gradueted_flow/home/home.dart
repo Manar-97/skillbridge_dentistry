@@ -39,49 +39,51 @@ class _HomeState extends State<Home> {
           )
         ],
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10),
-            child: SingleChildScrollView(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.05,
-                  ),
-                  buildAdsContainer(context),
-                  SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.05,
-                  ),
-                  Text(
-                    'Upload your case',
-                    style: GoogleFonts.getFont('Inter',
-                        fontSize: 22, fontWeight: FontWeight.w500),
-                  ),
-                  SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.02,
-                  ),
-                  buildCasesRow(),
-                  SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.03,
-                  ),
-                  Text(
-                    'Recommended for you',
-                    style: GoogleFonts.getFont('Inter',
-                        fontSize: 22, fontWeight: FontWeight.w500),
-                  ),
-                  SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.02,
-                  ),
-                  buildRecommendedRow(),
-                ],
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.05,
+                    ),
+                    buildAdsContainer(context),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.05,
+                    ),
+                    Text(
+                      'Upload your case',
+                      style: GoogleFonts.getFont('Inter',
+                          fontSize: 22, fontWeight: FontWeight.w500),
+                    ),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.02,
+                    ),
+                    buildCasesRow(),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.03,
+                    ),
+                    Text(
+                      'Recommended for you',
+                      style: GoogleFonts.getFont('Inter',
+                          fontSize: 22, fontWeight: FontWeight.w500),
+                    ),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.02,
+                    ),
+                    buildRecommendedRow(),
+                  ],
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
@@ -114,15 +116,10 @@ class _HomeState extends State<Home> {
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         CaseContainer(
-          icon: Icons.medical_services_outlined,
+          icon: Icons.personal_injury_outlined,
           onPressed: () {
             Navigator.pushNamed(context, CaseDescription.routeName);
           },
-          text: 'Description',
-        ),
-        CaseContainer(
-          icon: Icons.personal_injury_outlined,
-          onPressed: () {},
           text: 'Diagnose',
         ),
         CaseContainer(

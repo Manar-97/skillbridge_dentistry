@@ -53,16 +53,11 @@ class _ConsultantProfileScreenState extends State<ConsultantProfileScreen> {
               text: 'Settings',
               onTap: () {},
             ),
-            ListTileWidget(
-              icon: Icons.message,
-              text: 'Chats',
-              onTap: () {},
-            ),
-            ListTileWidget(
-              icon: Icons.wallet,
-              text: 'My Wallet',
-              onTap: () {},
-            ),
+            // ListTileWidget(
+            //   icon: Icons.wallet,
+            //   text: 'My Wallet',
+            //   onTap: () {},
+            // ),
             ListTileWidget(
               icon: Icons.feedback,
               text: 'FAQs',

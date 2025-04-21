@@ -18,8 +18,8 @@ class CaseContainer extends StatelessWidget {
     return Column(
       children: [
         Container(
-          height: 100,
-          width: 100,
+          height: 150,
+          width: 150,
           decoration: BoxDecoration(
               color: const Color(0xFFC9DFDD),
               borderRadius: BorderRadius.circular(8)),
@@ -35,7 +35,7 @@ class CaseContainer extends StatelessWidget {
           text,
           textAlign: TextAlign.center,
           style: GoogleFonts.getFont('Inter',
-              fontSize: 12,
+              fontSize: 18,
               color: const Color(0xFF2F504D)),
         ),
       ],

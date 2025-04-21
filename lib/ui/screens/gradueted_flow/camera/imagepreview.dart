@@ -74,7 +74,7 @@ class ImagePreviewScreen extends StatelessWidget {
                 AppButton(
                   onTap: () => Navigator.pushReplacementNamed(
                       context, CaseDescription.routeName),
-                  text: "Add Case Description",
+                  text: "Add Disease",
                 ),
               ],
             ),

@@ -37,9 +37,11 @@ class _ConsultantAcceptedCaseDetailsState
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.02,
             ),
-            Container(
-              decoration: const BoxDecoration(),
-              child: const Image(image: AssetImage('assets/p1.png')),
+            Center(
+              child: Container(
+                decoration: const BoxDecoration(),
+                child: const Image(image: AssetImage('assets/p1.png')),
+              ),
             ),
             const Text(
               'Case Details',

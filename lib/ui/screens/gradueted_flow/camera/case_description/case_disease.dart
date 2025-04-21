@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:skillbridge_dentistry/ui/screens/gradueted_flow/camera/camera.dart';
 import 'package:skillbridge_dentistry/ui/screens/gradueted_flow/camera/found_treate_case_details.dart';
 import 'package:skillbridge_dentistry/ui/screens/gradueted_flow/mains_dentist_creen.dart';
 import 'package:skillbridge_dentistry/ui/utils/widgets/appButton.dart';
 
-class CaseDescription extends StatefulWidget {
-  const CaseDescription({super.key});
-  static const String routeName = 'casedescription';
+class CaseDisease extends StatefulWidget {
+  const CaseDisease({super.key});
+  static const String routeName = 'casedisease';
 
   @override
-  State<CaseDescription> createState() => _CaseDescriptionState();
+  State<CaseDisease> createState() => _CaseDiseaseState();
 }
 
-class _CaseDescriptionState extends State<CaseDescription> {
+class _CaseDiseaseState extends State<CaseDisease> {
   final TextEditingController _caseDescription = TextEditingController();
 
   @override
@@ -29,7 +28,7 @@ class _CaseDescriptionState extends State<CaseDescription> {
               TextButton(
                 onPressed: () {
                   Navigator.pushReplacementNamed(
-                      context, CameraCases.routeName);
+                      context, MainDentistScreen.routeName);
                 },
                 child: Text(
                   'Skip',
@@ -61,7 +60,7 @@ class _CaseDescriptionState extends State<CaseDescription> {
                 height: MediaQuery.of(context).size.height * 0.4,
               ),
               AppButton(
-                  text: 'Upload Your Disease',
+                  text: 'Search about Disease',
                   onTap: () {
                     _showSuccessDialog(context);
                   })

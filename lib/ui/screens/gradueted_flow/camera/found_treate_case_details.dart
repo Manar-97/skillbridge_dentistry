@@ -21,20 +21,17 @@ class _FoundTreatCaseDetailsState extends State<FoundTreatCaseDetails> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              'Consultant Name',
-              style: TextStyle(fontWeight: FontWeight.w600, fontSize: 22),
-            ),
-            const Text(
-              'dentistname55@gmail.com',
-              style: TextStyle(color: Color(0xFF898989), fontSize: 17),
-            ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.02,
             ),
-            Container(
-              decoration: const BoxDecoration(),
-              child: const Image(image: AssetImage('assets/p1.png')),
+            Center(
+              child: Container(
+                decoration: const BoxDecoration(),
+                child: const Image(image: AssetImage('assets/p1.png')),
+              ),
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.01,
             ),
             const Text(
               'Treatment the case',
@@ -111,42 +108,5 @@ class _FoundTreatCaseDetailsState extends State<FoundTreatCaseDetails> {
         );
       },
     );
-    // Future.delayed(const Duration(seconds: 3), () {
-    //   Navigator.of(context).pop();
-    //   Future.delayed(Duration(milliseconds: 300), () {
-    //     showDialog(
-    //       context: context,
-    //       barrierDismissible: false, // يمنع الإغلاق بالنقر خارج النافذة
-    //       builder: (context) {
-    //         return Dialog(
-    //           shape: RoundedRectangleBorder(
-    //               borderRadius: BorderRadius.circular(15)),
-    //           child: Padding(
-    //             padding: const EdgeInsets.all(20.0),
-    //             child: Column(
-    //               mainAxisSize: MainAxisSize.min,
-    //               children: [
-    //                 Image.asset('assets/sent.png',
-    //                     width: 80), // ضع صورة علامة الصح هنا
-    //                 const SizedBox(height: 10),
-    //                 const Text(
-    //                   "Your case is being sent to a specialist. You will receive a response as soon as possible.",
-    //                   textAlign: TextAlign.center,
-    //                   style: TextStyle(fontSize: 14, color: Colors.grey),
-    //                 ),
-    //                 const SizedBox(height: 20),
-    //                 AppButton(
-    //                   onTap: () => Navigator.pushReplacementNamed(
-    //                       context, MainDentistScreen.routeName),
-    //                   text: "OK",
-    //                 ),
-    //               ],
-    //             ),
-    //           ),
-    //         );
-    //       },
-    //     );
-    //   });
-    // });
   }
 }
