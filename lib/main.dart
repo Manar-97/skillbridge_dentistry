@@ -64,7 +64,7 @@ class MyApp extends StatelessWidget {
         ConsultantNotifications.routeName: (_) =>
             const ConsultantNotifications(),
       },
-      initialRoute: MainConsultantScreen.routeName,
+      initialRoute: SplashScreen.routeName,
     );
   }
 }
