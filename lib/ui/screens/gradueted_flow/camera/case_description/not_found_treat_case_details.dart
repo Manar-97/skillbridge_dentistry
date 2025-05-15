@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:skillbridge_dentistry/ui/screens/Auth/consultant/consultant.dart';
-import 'package:skillbridge_dentistry/ui/screens/consultant_flow/main_consul_screen.dart';
 import 'package:skillbridge_dentistry/ui/screens/gradueted_flow/mains_dentist_creen.dart';
 
 import '../../../../utils/widgets/appButton.dart';
